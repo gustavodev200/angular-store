@@ -1,0 +1,11 @@
+/* LOGO */
+
+.navbar-logo {
+  font-weight: 700;
+  color: var(--white-primary-color);
+  font-size: 18px;
+}
+
+.navbar-logo__red {
+  color: var(--primary-color);
+}
