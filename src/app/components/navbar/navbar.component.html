@@ -1,41 +1,52 @@
 <nav class="navbar">
   <!-- Mobile -->
-  <ul class="navbar-mobile">
+  <ul class="navbar-mobile" [class]="showToggle ? 'navbar-mobile__column' : ''">
     <li class="navbar-mobile__link">
-      <button class="navbar-mobile__button">
-        <img src="assets/icons/menu.svg" alt="" />
-      </button>
+      <app-button-icon
+        [icon]="showToggle ? 'assets/icons/x.svg' : 'assets/icons/menu.svg'"
+        [alt]="'Nenu icon'"
+        (click)="onToggle()"
+      ></app-button-icon>
     </li>
-    <li>
+    <div *ngIf="showToggle" class="navbar-mobile__links-container">
+      <li><a href="#">Inicio </a></li>
+      <li><a href="#">Catalogo</a></li>
+      <li><a href="#">Ofertas</a></li>
+    </div>
+    <li *ngIf="!showToggle">
       <app-logo></app-logo>
     </li>
-    <li class="navbar-mobile__link">
-      <button class="navbar-mobile__button">
-        <img
-          width="16px"
-          height="16px"
-          src="assets/icons/shopping-cart.svg"
-          alt="cart icon"
-        />
-      </button>
+    <li class="navbar-mobile__link" *ngIf="!showToggle">
+      <app-button-icon
+        [icon]="'assets/icons/shopping-cart.svg'"
+        [alt]="'cart icon'"
+      ></app-button-icon>
     </li>
   </ul>
 
   <!-- Desktop -->
 
   <ul class="navbar-desktop">
-    <app-logo></app-logo>
+    <a href="#">
+      <app-logo></app-logo>
+    </a>
     <div class="navbar-desktop__links">
       <li><a href="#">Inicio </a></li>
-
+      <img src="assets/images/line.svg" alt="line" />
       <li><a href="#">Catalogo</a></li>
-
+      <img src="assets/images/line.svg" alt="line" />
       <li><a href="#">Ofertas</a></li>
     </div>
 
-    <div>
-      <button>Compre Agora</button>
-      <button>Carrinho</button>
+    <div class="navbar-desktop__actions">
+      <app-button-icon
+        [icon]="'assets/icons/user-2.svg'"
+        [alt]="'Login account'"
+      ></app-button-icon>
+      <app-button-icon
+        [icon]="'assets/icons/shopping-cart.svg'"
+        [alt]="'Cart icon'"
+      ></app-button-icon>
     </div>
   </ul>
 </nav>

@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  height: 85px;
+  height: auto;
   padding: 30px;
   display: flex;
   align-items: center;
@@ -9,6 +9,7 @@
 @media screen and (min-width: 768px) {
   .navbar {
     padding: 40px 100px;
+    height: auto;
   }
 }
 
@@ -17,8 +18,13 @@
 .navbar .navbar-mobile {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
+}
+
+.navbar .navbar-mobile__column {
+  align-items: end;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .navbar .navbar-mobile {
@@ -30,19 +36,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--dark-gray-color);
-  border-radius: 5px;
 }
 
-.navbar .navbar-mobile .navbar-mobile__link .navbar-mobile__button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
+/*LINKS MOBILE*/
+.navbar-mobile__links-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+.navbar-mobile__links-container li {
+  margin-top: 20px;
+}
+
+.navbar-mobile__links-container li a {
+  width: 100%;
+  color: var(--white-primary-color);
+  font-weight: 700;
 }
 
 /* DESKTOP */
@@ -71,4 +82,9 @@
 .navbar .navbar-desktop .navbar-desktop__links li a {
   cursor: pointer;
   color: var(--white-primary-color);
+}
+
+.navbar .navbar-desktop .navbar-desktop__actions {
+  display: flex;
+  gap: 30px;
 }

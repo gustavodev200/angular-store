@@ -1,0 +1,18 @@
+.navbar-mobile__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--dark-gray-color);
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .navbar-mobile__button {
+    width: 36px;
+    height: 36px;
+  }
+}
