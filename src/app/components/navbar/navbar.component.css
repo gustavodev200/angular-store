@@ -80,6 +80,11 @@
   font-weight: 700;
 }
 
+.navbar .navbar-desktop .navbar-desktop__links .navbar-desktop__link-container {
+  display: flex;
+  align-items: center;
+}
+
 .navbar .navbar-desktop .navbar-desktop__links li a {
   cursor: pointer;
   color: var(--white-primary-color);

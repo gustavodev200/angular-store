@@ -9,9 +9,11 @@
       ></app-button-icon>
     </li>
     <div *ngIf="showToggle" class="navbar-mobile__links-container">
-      <li><a href="#">Inicio </a></li>
-      <li><a href="#">Catalogo</a></li>
-      <li><a href="#">Ofertas</a></li>
+      <div *ngFor="let link of navLinks">
+        <li>
+          <a [routerLink]="link.path">{{ link.name }}</a>
+        </li>
+      </div>
     </div>
     <li *ngIf="!showToggle">
       <app-logo></app-logo>
@@ -30,12 +32,11 @@
     <a href="#">
       <app-logo></app-logo>
     </a>
-    <div class="navbar-desktop__links">
-      <li><a href="#">Inicio </a></li>
+    <div class="navbar-desktop__links" *ngFor="let link of navLinks">
+      <li>
+        <a [routerLink]="link.path">{{ link.name }}</a>
+      </li>
       <img src="assets/images/line.svg" alt="line" />
-      <li><a href="#">Catalogo</a></li>
-      <img src="assets/images/line.svg" alt="line" />
-      <li><a href="#">Ofertas</a></li>
     </div>
 
     <div class="navbar-desktop__actions">
