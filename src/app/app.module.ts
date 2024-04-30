@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { ButtonIconComponent } from './components/button-icon/button-icon.component';
+import { HeroSectionComponent } from './pages/hero-section/hero-section.component';
+import { CategoryNavigatorButtonComponent } from './componnets/category-navigator-button/category-navigator-button.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LogoComponent,
-    ButtonIconComponent
+    ButtonIconComponent,
+    HeroSectionComponent,
+    CategoryNavigatorButtonComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

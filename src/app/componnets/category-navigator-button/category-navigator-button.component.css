@@ -1,0 +1,14 @@
+.category-navigator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid var(--dark-gray-color);
+  height: 40px;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white-primary-color);
+}

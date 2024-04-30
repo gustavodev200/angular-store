@@ -1,0 +1,20 @@
+<section class="hero-section">
+  <img
+    class="hero-section__banner-mobile"
+    src="assets/images/banner-55-off.svg"
+    alt="Banner 55% de Desconto"
+  />
+  <img
+    class="hero-section__banner-desktop"
+    src="assets/images/banner-ofertas.svg"
+    alt="Banner 55% de Desconto"
+  />
+  <div class="hero-section__categories">
+    <app-category-navigator-button
+      *ngFor="let category of categoriesData"
+      [path]="category.path"
+      [name]="category.name"
+      [imageURL]="category.imageURL"
+    ></app-category-navigator-button>
+  </div>
+</section>
