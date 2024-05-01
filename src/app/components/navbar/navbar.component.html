@@ -32,11 +32,13 @@
     <a href="#">
       <app-logo></app-logo>
     </a>
-    <div class="navbar-desktop__links" *ngFor="let link of navLinks">
-      <li>
-        <a [routerLink]="link.path">{{ link.name }}</a>
-      </li>
-      <img src="assets/images/line.svg" alt="line" />
+    <div class="navbar-desktop__links-container">
+      <div class="navbar-desktop__links" *ngFor="let link of navLinks">
+        <li>
+          <a [routerLink]="link.path">{{ link.name }}</a>
+        </li>
+        <!-- <img src="assets/images/line.svg" alt="line" /> -->
+      </div>
     </div>
 
     <div class="navbar-desktop__actions">

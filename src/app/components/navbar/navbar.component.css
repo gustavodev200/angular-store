@@ -72,17 +72,21 @@
   }
 }
 
-.navbar .navbar-desktop .navbar-desktop__links {
+.navbar .navbar-desktop .navbar-desktop__links-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar
+  .navbar-desktop
+  .navbar-desktop__links-container
+  .navbar-desktop__links {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
   font-weight: 700;
-}
-
-.navbar .navbar-desktop .navbar-desktop__links .navbar-desktop__link-container {
-  display: flex;
-  align-items: center;
 }
 
 .navbar .navbar-desktop .navbar-desktop__links li a {
